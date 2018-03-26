@@ -1,0 +1,4 @@
+sudo git pull
+sudo git add file-to-add
+sudo git commit -m "Add existing file"
+sudo git put origin
