@@ -11,14 +11,14 @@ PUlldown =  3.3v pin  ----- 10k------- negativo + 1k ----- GPIO
 # mqtt topic 
 +/raspberry/#
 # comandos
-#cmnd/raspberry/POWER1 ON or OFF
-#cmnd/raspberry/POWER2 ON or OFF
-#cmnd/raspberry/POWER3 ON or OFF
-#cmnd/raspberry/POWER4 ON or OFF
-#cmnd/raspberry/POWER5 ON or OFF
-#cmnd/raspberry/POWER6 ON or OFF
-#cmnd/raspberry/POWER7 ON or OFF
-#cmnd/raspberry/POWER8 ON or OFF 
+cmnd/raspberry/POWER1 ON or OFF
+cmnd/raspberry/POWER2 ON or OFF
+cmnd/raspberry/POWER3 ON or OFF
+cmnd/raspberry/POWER4 ON or OFF
+cmnd/raspberry/POWER5 ON or OFF
+cmnd/raspberry/POWER6 ON or OFF
+cmnd/raspberry/POWER7 ON or OFF
+cmnd/raspberry/POWER8 ON or OFF 
 
 # comando para test desde servidor mqtt:
 mosquitto_pub -h localhost -t cmnd/raspberry/POWER1 -m 'OFF' -u username -P password  -p 17388
