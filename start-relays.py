@@ -102,56 +102,56 @@ def on_message(client, userdata, message):
                         print ("Commando recibido OFF")
                         GPIO.output(pinRelays[relay8], GPIO.LOW)
 			client.publish("stat/raspberry/POWER8","OFF")
-def mfp1(channel):
+def callf1(channel):
    if GPIO.input(pinBotones[relay1]):
 	print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay1])))
         GPIO.output(pinRelays[relay1], GPIO.HIGH)
    else:
 	print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay1])))
         GPIO.output(pinRelays[relay1], GPIO.LOW)
-def mfp2(channel):
+def callf2(channel):
    if GPIO.input(pinBotones[relay2]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay2])))
         GPIO.output(pinRelays[relay2], GPIO.HIGH)
    else:
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay1])))
         GPIO.output(pinRelays[relay1], GPIO.LOW)
-def mfp3(channel):
+def callf3(channel):
    if GPIO.input(pinBotones[relay3]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay3])))
         GPIO.output(pinRelays[relay3], GPIO.HIGH)
    else:
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay3])))
         GPIO.output(pinRelays[relay3], GPIO.LOW)
-def mfp4(channel):
+def callf4(channel):
    if GPIO.input(pinBotones[relay4]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay4])))
         GPIO.output(pinRelays[relay4], GPIO.HIGH)
    else:
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay4])))
         GPIO.output(pinRelays[relay4], GPIO.LOW)
-def mfp5(channel):
+def callf5(channel):
    if GPIO.input(pinBotones[relay5]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay5])))
         GPIO.output(pinRelays[relay5], GPIO.HIGH)
    else:
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay5])))
         GPIO.output(pinRelays[relay5], GPIO.LOW)
-def mfp6(channel):
+def callf6(channel):
    if GPIO.input(pinBotones[relay6]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay6])))
         GPIO.output(pinRelays[relay6], GPIO.HIGH)
    else:
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay6])))
         GPIO.output(pinRelays[relay6], GPIO.LOW)
-def mfp7(channel):
+def callf7(channel):
    if GPIO.input(pinBotones[relay7]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay7])))
         GPIO.output(pinRelays[relay7], GPIO.HIGH)
    else:
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay7])))
         GPIO.output(pinRelays[relay7], GPIO.LOW)
-def mfp8(channel):
+def callf8(channel):
    if GPIO.input(pinBotones[relay8]):
         print("mfp: channel={} is {}".format(channel, GPIO.input(pinBotones[relay8])))
         GPIO.output(pinRelays[relay8], GPIO.HIGH)
@@ -216,14 +216,14 @@ for i in pinRelays:
 for Y in pinBotones:
    GPIO.setup(Y,GPIO.IN)
 try:
-	GPIO.add_event_detect(pinBotones[relay1], GPIO.BOTH, callback=mfp1)
-	GPIO.add_event_detect(pinBotones[relay2], GPIO.BOTH, callback=mfp2)
-	GPIO.add_event_detect(pinBotones[relay3], GPIO.BOTH, callback=mfp3)
-	GPIO.add_event_detect(pinBotones[relay4], GPIO.BOTH, callback=mfp4)
-	GPIO.add_event_detect(pinBotones[relay5], GPIO.BOTH, callback=mfp5)
-	GPIO.add_event_detect(pinBotones[relay6], GPIO.BOTH, callback=mfp6)
-	GPIO.add_event_detect(pinBotones[relay7], GPIO.BOTH, callback=mfp7)
-	GPIO.add_event_detect(pinBotones[relay8], GPIO.BOTH, callback=mfp8)
+	GPIO.add_event_detect(pinBotones[relay1], GPIO.BOTH, callback=callf1)
+	GPIO.add_event_detect(pinBotones[relay2], GPIO.BOTH, callback=callf2)
+	GPIO.add_event_detect(pinBotones[relay3], GPIO.BOTH, callback=callf3)
+	GPIO.add_event_detect(pinBotones[relay4], GPIO.BOTH, callback=callf4)
+	GPIO.add_event_detect(pinBotones[relay5], GPIO.BOTH, callback=callf5)
+	GPIO.add_event_detect(pinBotones[relay6], GPIO.BOTH, callback=callf6)
+	GPIO.add_event_detect(pinBotones[relay7], GPIO.BOTH, callback=callf7)
+	GPIO.add_event_detect(pinBotones[relay8], GPIO.BOTH, callback=callf8)
 #	GPIO.add_event_detect(pinBotones[relay], GPIO.FALLING, callback=suelto)
 #	GPIO.add_event_detect(Input_Sig, GPIO.FALLING, callback=interrupt_service_routine, bouncetime=5)
 	while True:
