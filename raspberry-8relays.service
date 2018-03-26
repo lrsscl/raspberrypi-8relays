@@ -1,0 +1,12 @@
+[Unit]
+Description=Servicio relays
+After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/opt/raspberrypi-8relays
+User=pi
+ExecStart=/opt/raspberrypi-8relays/start-relays.py
+
+[Install]
+WantedBy=multi-user.target
