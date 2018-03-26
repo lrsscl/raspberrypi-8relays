@@ -5,6 +5,10 @@ Raspberry pi zero w + 8 relay + 8 botones controlado con mqtt
 
 #Ademas de integrar el proyecto con openhab2 y echo de amazon.
 
+#Pin de los relays BCM 4,17,18,22,23,24,25,27 ver imagen PiZero_1.png
+#Pin de Botones BCM 6,12,13,19,16,26,20,21 configuracion pulldown con resistencas de 10k y de 1k al gpio.
+#PUlldown =  3.3v pin  ----- 10k------- negativo + 1k ----- GPIO
+
 # 
 
 #  librerias 
